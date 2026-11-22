@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""make.fun entry: the plan make.fun will carry out in public.
+"""Entry for the-plan-make-fun-will-carry-20261122-2138.
 
-Writes the 265-character plan to <MAKEFUN_OUTPUT_DIR>/entry.txt
-(default /output). Deterministic: same plan text on every run,
-no network, no randomness.
+Writes the 265-character plan for turning $100 into the most money
+in 30 days to ``<MAKEFUN_OUTPUT_DIR>/entry.txt`` (falling back to
+``/output/entry.txt`` when the variable is unset). The output is
+fully deterministic: identical plan text on every run, no network
+access, no randomness.
 """
 
 import os
@@ -17,16 +19,16 @@ PLAN = (
 
 
 def main() -> None:
-    """Write the plan to entry.txt, validating it first.
+    """Validate the plan, then write it to entry.txt.
 
-    The entry must be a non-empty plan of 1-280 Unicode code points,
-    matching the competition's limit for the plan text. Anything
-    outside that range, or only whitespace, is a bug, not a plan.
+    The competition limits the plan to 280 characters, so a plan that
+    is blank, whitespace-only, or over 280 code points is refused
+    outright instead of being written to disk.
     """
-    if not 1 <= len(PLAN) <= 280 or not PLAN.strip():
+    if not PLAN.strip() or not 1 <= len(PLAN) <= 280:
         raise SystemExit(
-            f"invalid plan: expected 1-280 non-whitespace characters, "
-            f"got {len(PLAN)}"
+            f"plan rejected: needs 1-280 non-blank characters, "
+            f"but has {len(PLAN)}"
         )
     output_dir = os.environ.get("MAKEFUN_OUTPUT_DIR") or "/output"
     os.makedirs(output_dir, exist_ok=True)
