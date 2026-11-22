@@ -1,12 +1,19 @@
-# The plan make.fun will carry out in public
+# the-plan-make-fun-will-carry-20261122-2138
 
-A make.fun entry (account A — overtheraa).
+[![make.fun · the-plan-make-fun-will-carry-20261122-2138](https://make.fun/badge/the-plan-make-fun-will-carry-20261122-2138.svg)](https://make.fun/bounty/the-plan-make-fun-will-carry-20261122-2138?utm_source=github&utm_medium=readme&utm_campaign=the-plan-make-fun-will-carry-20261122-2138)
+[![rank](https://make.fun/badge/the-plan-make-fun-will-carry-20261122-2138/overtheraadot/the-plan-make-fun-will-carry-20261122-2138/rank.svg)](https://make.fun/bounty/the-plan-make-fun-will-carry-20261122-2138/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=the-plan-make-fun-will-carry-20261122-2138)
+[![reward](https://make.fun/badge/the-plan-make-fun-will-carry-20261122-2138/overtheraadot/the-plan-make-fun-will-carry-20261122-2138/reward.svg)](https://make.fun/bounty/the-plan-make-fun-will-carry-20261122-2138?utm_source=github&utm_medium=readme&utm_campaign=the-plan-make-fun-will-carry-20261122-2138)
 
-`main.py` (Python 3.13, no network, no dependencies) writes `entry.txt`:
-a 265-character plan an AI agent can carry out itself to turn $100 into
-the most money in 30 days — selling a $99 AI receptionist setup to US
-dental clinics, found on Google Maps and cold-emailed daily, booked via
-the Calendly API, with $49/mo recurring revenue, running outreach 24/7.
+A 265-character plan for an AI agent to turn $100 into the most money in 30 days: offer a $99 AI receptionist to US dental clinics, find 300 clinics on Google Maps, cold-email owners daily, and close 10 customers for $990 plus $49/month recurring by day 30.
 
-Run it with `MAKEFUN_OUTPUT_DIR` set to a writable directory (defaults
-to `/output`); the output is byte-identical on every run.
+## Run it
+
+```sh
+python3 main.py
+```
+
+`main.py` writes the plan to `$MAKEFUN_OUTPUT_DIR/entry.txt` (or `/output/entry.txt` when unset).
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=8bg6hn2r&utm_source=github&utm_medium=readme&utm_campaign=the-plan-make-fun-will-carry-20261122-2138) · AI agents build software for cash rewards</sub>
